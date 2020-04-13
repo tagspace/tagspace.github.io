@@ -1,1 +1,152 @@
-Hello Big World
+
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta content="Manage your league or knockout tournament online.  No sign-up required." name="description">
+	<meta content="tournament management, competition management, league management, fixtures, administration, scheduling, organise" name="keywords">
+    
+    <!-- set viewport to device-width or 450px if smaller-->
+	<meta id="metaViewport" name="viewport" content="width=device-width" />
+	<script>
+		if (typeof(window.innerWidth) != "undefined" 
+			&& window.innerWidth < 450) 
+		{
+			var mvp = document.getElementById('metaViewport');
+			mvp.setAttribute('content','width=450');
+		}
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="/gwt.css">
+	<link type="text/css" rel="stylesheet" href="/common.css">
+    <!-- <link type="text/css" rel="stylesheet" href="/TopTournament.css"> -->
+    <link type="text/css" rel="stylesheet" href="/Screens.css">
+	<style>
+		html, body
+		{
+			height: 100%;
+		}
+		body
+		{
+			margin: 0;
+		}
+		html
+		{
+			background-color: #252525;
+		}
+		#container 
+		{
+			min-height: 100%;
+			margin-bottom: -537px;/*must match height of footer image*/
+			position: relative;
+			background:url(/bg_sky_middle.png) repeat-y center top;
+		}
+		#footer 
+		{
+			height: 537px;/*must match height of footer image*/
+			position: relative;
+			background:url(/bg_sky_bottom.png) no-repeat center bottom;
+		}
+		.clearfooter 
+		{
+			height: 450px;/*must match height of footer image*/
+			clear: both;
+		}
+		#content
+		{
+			background:url(/bg_sky_top.png) no-repeat center top;
+		}
+		#root
+		{
+			margin-left: auto;
+			margin-right: auto;
+			width: 450px;
+			position: relative;
+			top: 145px;
+			z-index: 50;/*without this content gets cut off page*/
+			min-height: 421px;/*must match height of header image*/
+		}
+		#banner
+		{
+			/*invisible clickable div that covers banner logo*/
+			width: 450px;
+			height: 90px;
+			cursor: pointer;
+			position: relative;
+			top: 70px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.dialogBox, .gwt-PopupPanelGlass, .gwt-DecoratedPopupPanel, .dateBoxPopup
+		{
+			z-index: 50;/*required so it doesn't get hidden behind content*/
+		}
+		html
+		{
+			min-width: 400px;/*should match viewport meta tag at top of page*/
+		}
+		#bottomBar
+		{
+			max-width: 1346px; /*1366 - padding */
+			min-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			color: #ccc;
+			padding: 8px;
+			padding-left: 10px;
+			padding-right: 10px;
+			height: 16px;
+			text-align: right;
+		}
+		#bottomBar a
+		{
+			color: #ccc;
+			text-decoration: none;
+		}
+		#bottomBar a:hover
+		{
+			text-decoration: underline;
+		}
+	</style>
+	
+	<script type="text/javascript" language="javascript" src="/welcome/welcome.nocache.js"></script>
+	
+    <title>Top Tournament</title>
+  </head>
+
+  <body>
+  
+  	<!-- Google analytics -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-39825528-1']);
+	  _gaq.push(['_setDomainName', 'toptournament.co.uk']);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+  
+  
+  
+	<div id="container">
+		<div id="content">
+			<div id="banner" onclick="window.location='/'"></div>
+			<div id="root"></div>
+		</div>
+		<div class="clearfooter"></div>
+	</div>
+	<div id="footer"></div>
+	<div id="bottomBar"><a href="mailto:contact@toptournament.co.uk">Contact Us</a></div>
+   
+  </body>
+</html>
